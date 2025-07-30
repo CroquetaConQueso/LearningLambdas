@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class l1 {
@@ -16,6 +17,10 @@ public class l1 {
 
         //Podemos hacer esto:
         Collections.sort(nombres, (a,b) -> a.length() - b.length());
+
+        //Tambien se podría hacer
+        Collections.sort(nombres, Comparator.comparing(String::length));
+        //Al realizar :: siempre estamos hablando de una referencia a un metodo en el cual permite pasar esto como un argumento
         System.out.println(nombres);
         
     }
