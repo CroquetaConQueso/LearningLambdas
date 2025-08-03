@@ -1,5 +1,7 @@
 import java.util.List;
 import java.util.Optional;
+import java.util.Scanner;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class l2{
@@ -31,6 +33,9 @@ public class l2{
         System.out.println(emptyProduct);
         System.out.println(trying.getProductName() + trying.getProductType() + trying.getProductPrice());
 
+        Scanner entrada = new Scanner(System.in);
 
+        String value = ((Function<String,String>) s -> s.trim()).andThen(s-> s.toUpperCase()).andThen(s -> s + "!!!").apply(entrada.nextLine());
+        System.out.println(value);
     }
 }
